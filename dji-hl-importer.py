@@ -65,7 +65,10 @@ def get_clip_highlights(file_path: str) -> []:
         text=True,
     )
     # Format Text Output of exiftool which is something like "[QuickTime]     HighlightMarkers                : 3.649, 6.675"
-    text_result = result.stdout.split(":")[1].strip()
+    text_result = result.stdout.split(":")[1].strip() if len(result.stdout.split(":")) > 1 else ""
+
+    if text_result == "":
+        return []
 
     return [hl_tc.strip() for hl_tc in text_result.split(",")]
 
