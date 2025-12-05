@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import pprint
 import subprocess
 
 resolve = app.GetResolve()
