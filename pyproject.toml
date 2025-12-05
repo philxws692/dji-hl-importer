@@ -1,0 +1,7 @@
+[project]
+name = "dji-hl-importer"
+version = "0.1.0"
+description = "Import HighlightMarkers from DJI Cameras right into Davinci Resolve"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
